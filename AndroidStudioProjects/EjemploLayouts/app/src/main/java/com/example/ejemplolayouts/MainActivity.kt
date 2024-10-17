@@ -6,7 +6,9 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -26,13 +28,12 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            ColumnsExample4()
+            BoxExample2()
         }
     }
 }
 
 @Composable
-@Preview
 fun ColumnsExample1(){
     Column (modifier = Modifier.size(300.dp)) {
         Text(text = "A",
@@ -52,6 +53,7 @@ fun ColumnsExample2(){
         horizontalAlignment = Alignment.CenterHorizontally) {
         Text(text = "A",
             modifier = Modifier.size(50.dp).background(color = Color(0xFFfff59d)))
+        Spacer(modifier = Modifier.size(30.dp, 10.dp))
         Text(text = "B",
             modifier = Modifier.size(50.dp).background(color = Color(0xFFffe082)))
         Text(text = "C",
@@ -60,7 +62,6 @@ fun ColumnsExample2(){
 }
 
 @Composable
-@Preview
 fun ColumnsExample3(){
     Column (modifier = Modifier.size(200.dp).background(color = Color.Magenta)) {
         Text(text = "A",
@@ -75,7 +76,6 @@ fun ColumnsExample3(){
 }
 
 @Composable
-@Preview
 fun ColumnsExample4(){
     Column (modifier = Modifier.size(200.dp).background(color = Color.Magenta)) {
         Text(text = "A",
@@ -84,5 +84,28 @@ fun ColumnsExample4(){
             modifier = Modifier.size(50.dp).background(color = Color(0xFFffe082)).weight(2.0f))
         Text(text = "C",
             modifier = Modifier.size(50.dp).background(color = Color(0xFFffcc80)).weight(3.0f))
+    }
+}
+
+@Composable
+fun BoxExample(){
+     Box(){
+
+     };
+}
+
+@Composable
+fun BoxExample2(){
+    Box(
+        modifier = Modifier
+            .size(300.dp)
+            .background(color = Color.Gray),
+        contentAlignment = Alignment.Center){
+        Text(text = "A",
+            modifier = Modifier.size(150.dp).background(color = Color(0xFFfff59d)))
+        Text(text = "B",
+            modifier = Modifier.size(100.dp).background(color = Color(0xFFffe082)))
+        Text(text = "C",
+            modifier = Modifier.size(50.dp).background(color = Color(0xFFffcc80)))
     }
 }
