@@ -59,7 +59,7 @@ fun Sumar2() {
             mutableStateOf("")
         }
 
-        Text(text = "LA MEGACALCULADORA MARAVITUPENDA", modifier = Modifier.fillMaxWidth().padding(10.dp),
+        Text(text = "LA MEGACALCULADORA MARAVITUPENDA", modifier = Modifier.padding(10.dp).align(Alignment.CenterHorizontally),
             color = Color.Blue
         )
 
