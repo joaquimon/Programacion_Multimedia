@@ -73,7 +73,7 @@ val contactos = mutableStateListOf<Contacto>(
 fun AdministrarContactos(){
     var nombre by remember { mutableStateOf("") }
     var mail by remember { mutableStateOf("") }
-    Column() {
+    Column(modifier = Modifier.background(color = Color.LightGray)) {
         Spacer(Modifier.size(40.dp))
         Text(
             text = "AGENDA",
