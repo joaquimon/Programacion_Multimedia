@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-button expand="block" (click)="up()" [disabled]="num==MAX">
+  +
+  </ion-button>
+ </ion-header>
+ <ion-content>
+  <ion-grid>
+  <ion-row>
+  <ion-col>
+  <ion-text>{{num}}</ion-text>
+  </ion-col>
+  </ion-row>
+  </ion-grid>
+ </ion-content>
+ <ion-footer>
+  <ion-button expand="block" (click)="down()" [disabled]="num==MIN">
+  -
+  </ion-button>
+ </ion-footer>
