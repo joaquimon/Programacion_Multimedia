@@ -1,0 +1,7 @@
+{
+  "name": "appNavegacion",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
